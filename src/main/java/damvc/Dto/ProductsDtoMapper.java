@@ -9,7 +9,7 @@ public class ProductsDtoMapper implements RowMapper<ProductsDto> {
 	@Override
 	public ProductsDto mapRow(ResultSet rs, int rowNum) throws SQLException {
 		ProductsDto products = new ProductsDto();
-		products.setId(rs.getInt("id"));
+		products.setId(rs.getInt("id"));;
 		products.setName(rs.getString("name"));
 		products.setId_type(rs.getInt("id_type"));
 		products.setDescription(rs.getString("description"));

@@ -1,31 +1,25 @@
 package damvc.controller.User;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-
-import damvc.Service.User.HomeServiceImpl;
-
-
-
 @Controller
 public class HomeController extends BaseController {
-	@Autowired
-	HomeServiceImpl HomeService;
-	@RequestMapping(value = {"/","trang-chu"})
+
+	@RequestMapping(value = { "/", "trang-chu" })
 	public ModelAndView Index()
-	
+
 	{
-		ModelAndView mView = new ModelAndView("user/Home");
-		mView.addObject("slide",HomeService.GetDataSlide());
-		mView.addObject("type",HomeService.GetDataType());
-		return mView;
+		_mvShare.addObject("type", _HomeService.GetDataType());
+		_mvShare.addObject("product", _HomeService.getDataProducts());
+		_mvShare.setViewName("user/Home");
+		return _mvShare;
 	}
-	@RequestMapping(value ="/san-pham")
+
+	@RequestMapping(value = "/san-pham")
 	public ModelAndView Product()
-	
+
 	{
 		ModelAndView mView = new ModelAndView("user/sanpham");
 //		mView.setView(null)

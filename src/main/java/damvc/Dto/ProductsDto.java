@@ -1,7 +1,7 @@
 package damvc.Dto;
 import java.sql.Date;
 public class ProductsDto {
-	private int id ; 
+	private int id; 
 	private String name;
 	private int id_type;
 	private String description;

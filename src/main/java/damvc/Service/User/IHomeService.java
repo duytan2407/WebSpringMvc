@@ -14,6 +14,7 @@ public interface IHomeService {
 	@Autowired
 	public List<Slide> GetDataSlide();
 	public List<Type_products> GetDataType();
-	public List<ProductsDto> getDataProductsDtos();
+	public List<ProductsDto> getDataProducts();
+	
 }
 

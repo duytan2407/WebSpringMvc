@@ -55,8 +55,11 @@ Lower Header Section
 		<div id="gototop"></div>
 
 		<%@include file="/WEB-INF/views/layouts/user/header.jsp"%>
+		
 		<decorator:body />
+		
 		<%@include file="/WEB-INF/views/layouts/user/footer.jsp"%>
+		
 
 
 		<div class="copyright">

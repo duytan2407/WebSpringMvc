@@ -12,9 +12,8 @@ import damvc.Entity.MapperType_products;
 import damvc.Entity.Type_products;
 
 @Repository
-public class Type_productsDao {
-	@Autowired
-	public JdbcTemplate _jdbcTemplate;
+public class Type_productsDao extends BaseDao {
+	
 
 	public List<Type_products> getDataType() {
 		List<Type_products> list = new ArrayList<Type_products>();

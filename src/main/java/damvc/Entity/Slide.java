@@ -10,8 +10,6 @@ public class Slide {
 		super();
 	}
 
-
-
 	public int getId() {
 		return id;
 	}

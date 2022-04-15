@@ -11,10 +11,7 @@ import damvc.Entity.MapperSlide;
 import damvc.Entity.Slide;
 
 @Repository
-public class SlideDao {
-
-	@Autowired
-	public JdbcTemplate _jdbcTemplate;
+public class SlideDao extends BaseDao {
 
 	public List<Slide> getDataSlide() {
 		List<Slide> list = new ArrayList<Slide>();
