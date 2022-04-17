@@ -1,6 +1,7 @@
 package damvc.controller.User;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -17,12 +18,11 @@ public class HomeController extends BaseController {
 		return _mvShare;
 	}
 
-	@RequestMapping(value = "/san-pham")
-	public ModelAndView Product()
-
+	@RequestMapping(value = "/san-pham/{id}")
+	public ModelAndView Product(@PathVariable String id)
 	{
-		ModelAndView mView = new ModelAndView("user/sanpham");
-//		mView.setView(null)
-		return mView;
+		ModelAndView _mvShare = new ModelAndView("user/sanpham");
+		_mvShare.addObject("idsp", id);
+		return _mvShare;
 	}
 }
