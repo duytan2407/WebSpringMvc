@@ -21,8 +21,9 @@ public class HomeController extends BaseController {
 	@RequestMapping(value = "/san-pham/{id}")
 	public ModelAndView Product(@PathVariable String id)
 	{
-		ModelAndView _mvShare = new ModelAndView("user/sanpham");
-		_mvShare.addObject("idsp", id);
+	
+		_mvShare.addObject("AllIdpro",_CategoryService.GetAllProductsByID(Integer.parseInt(id)));
+		_mvShare.setViewName("user/sanpham");
 		return _mvShare;
 	}
 }
