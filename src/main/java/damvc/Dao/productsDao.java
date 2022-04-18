@@ -8,7 +8,7 @@ import damvc.Dto.ProductsDto;
 import damvc.Dto.ProductsDtoMapper;
 
 @Repository
-public class ProductsDao extends BaseDao {
+public class productsDao extends BaseDao {
 
 	private String sqlString() {
 		StringBuffer sql = new StringBuffer();
