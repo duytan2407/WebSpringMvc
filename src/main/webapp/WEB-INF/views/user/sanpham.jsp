@@ -55,8 +55,8 @@
 							<div class="thumbnail">
 								<a href="product_details.html" class="overlay"></a> <a
 									class="zoomTool" href="product_details.html"
-									title="add to cart"><span class="icon-search"></span> QUICK
-									VIEW</a> <a href="product_details.html"><img
+									title="add to cart"><span class="icon-search"></span>QUICK
+									VIEW</a><a href="<c:url value="/chi-tiet/${item.id}"/>"><img
 									src="<c:url value="/assets/user/img/${item.image}"/>" height="250px" alt=""
 										></a>
 								<div class="caption cntr">

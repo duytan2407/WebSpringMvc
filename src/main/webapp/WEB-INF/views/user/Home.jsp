@@ -11,33 +11,17 @@
 	<!-- 
 Body Section 
 -->
-	<h1>${product.size()}</h1>
 	<div class="row">
 		<div id="sidebar" class="span3">
 			<div class="well well-small">
 				<ul class="nav nav-list">
 					<c:forEach var="item" items="${type}" varStatus="index">
 						<li><a href='<c:url value="/san-pham/${item.id}"/>'><span
-								class="icon-chevron-right"> </span>${item.name}</a></li>
+								class="c"> </span>${item.name}</a></li>
 					</c:forEach>
-
-
-					<li style="border: 0">&nbsp;</li>
-					<li><a class="totalInCart" href="cart.html"><strong>Total
-								Amount <span class="badge badge-warning pull-right"
-								style="line-height: 18px;">$448.42</span>
-						</strong></a></li>
 				</ul>
 			</div>
-
-			<div class="well well-small alert alert-warning cntr">
-				<h2>50% Discount</h2>
-				<p>
-					only valid for online order. <br> <br> <a
-						class="defaultBtn" href="#">Click here </a>
-				</p>
-			</div>
-	</div>
+</div>
 		<div class="span9">
 			<div class="well np">
 				<div id="myCarousel" class="carousel slide homCar">
@@ -67,43 +51,44 @@ Body Section
 		<!--
 New Products
 -->
-			<div class="well well-small">
+		<div class="well well-small">
 			<h3>Sản phẩm mới</h3>
 			<hr class="soften" />
 			<div class="row-fluid">
 				<div id="newProductCar" class="carousel slide">
 					<div class="carousel-inner">
-					<c:if test="${ product.size() > 0 }">
-						<div class="item active">
-							<ul class="thumbnails">
-							<c:forEach var="item" items="${ product }" varStatus="loop">
-								<li class="span3">
-									<div class="thumbnail">
-										<a class="zoomTool" href="product_details.html"
-											title="add to cart"><span class="icon-search"></span>
-											QUICK VIEW</a> <a href="product_details.html"><img
-											src="<c:url value="/assets/user/img/${item.image}"/>" height="250px" alt=""
-										></a>
-									</div>
-								</li>
-								<c:if test="${ (loop.index + 1) % 4 == 0 || (loop.index + 1)  == products.size() }">
-										</ul>
-									</div>
-									<c:if test="${ (loop.index + 1) < product.size() }">
-										<div class="item">
-											<ul class="thumbnails">
-									</c:if>
-								</c:if>
-							</c:forEach>
-					</c:if>
-						
+						<c:if test="${ product.size() > 0 }">
+							<div class="item active">
+								<ul class="thumbnails">
+									<c:forEach var="item" items="${ product }" varStatus="loop">
+										<li class="span3">
+											<div class="thumbnail">
+												<a class="zoomTool" href="product_details.html"
+													title="add to cart"><span class="icon-search"></span>
+													QUICK VIEW</a> <a href="product_details.html"><img
+													src="<c:url value="/assets/user/img/${item.image}"/>"
+													height="250px" alt=""></a>
+											</div>
+										</li>
+										<c:if
+											test="${ (loop.index + 1) % 4 == 0 || (loop.index + 1)  == products.size() }">
+								</ul>
+							</div>
+							<c:if test="${ (loop.index + 1) < product.size() }">
+								<div class="item">
+									<ul class="thumbnails">
+							</c:if>
+						</c:if>
+						</c:forEach>
+						</c:if>
+
 					</div>
 					<a class="left carousel-control" href="#newProductCar"
 						data-slide="prev">&lsaquo;</a> <a class="right carousel-control"
 						href="#newProductCar" data-slide="next">&rsaquo;</a>
 				</div>
 			</div>
-			
+
 		</div>
 		<!--
 	Featured Products
@@ -125,8 +110,8 @@ New Products
 									<a class="zoomTool" href="#" title="add to cart"><span
 										class="icon-search"></span> QUICK VIEW</a> <a
 										href="chi-tiet-san-pham/${item.id }"><img
-										src="<c:url value="/assets/user/img/${item.image}"/>" height="250px" alt=""
-										></a>
+										src="<c:url value="/assets/user/img/${item.image}"/>"
+										height="250px" alt=""></a>
 									<div class="caption">
 										<h5>${ item.name }</h5>
 										<h4>
@@ -161,7 +146,7 @@ New Products
 			<a class="btn btn-mini pull-right" href="#">Xem Thêm <span
 				class="icon-plus"></span></a> Popular Products
 		</div>
-		
+
 	</div>
 	</div>
 	<!-- 

@@ -26,4 +26,14 @@ public class HomeController extends BaseController {
 		_mvShare.setViewName("user/sanpham");
 		return _mvShare;
 	}
+	@RequestMapping(value = {"chi-tiet/{id}"})
+	public ModelAndView Detail(@PathVariable String id)
+
+	{
+		_mvShare.addObject("product",_ProductService.GetProductByID(Integer.parseInt(id)));
+		_mvShare.setViewName("user/Detail");
+
+		return _mvShare;
+	}
+	
 }
