@@ -3,6 +3,7 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
 	prefix="decorator"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +27,7 @@
 <link rel="shortcut icon"
 	href="<c:url value="asset/user/ico/favicon.ico"/>">
 </head>
+<decorator:head/>
 <body>
 	<!-- 
 	Upper Header Section 
