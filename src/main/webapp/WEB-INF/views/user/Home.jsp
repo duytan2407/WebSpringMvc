@@ -4,6 +4,7 @@
 	prefix="decorator"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
 
 <%@ page isELIgnored="false"%>
 <title>Trang Chủ</title>
@@ -37,7 +38,7 @@ Body Section
 						class="defaultBtn" href="#">Click here </a>
 				</p>
 			</div>
-	</div>
+		</div>
 		<div class="span9">
 			<div class="well np">
 				<div id="myCarousel" class="carousel slide homCar">
@@ -182,8 +183,8 @@ New Products
 									<a class="zoomTool" href="#" title="add to cart"><span
 										class="icon-search"></span> QUICK VIEW</a> <a
 										href="chi-tiet-san-pham/${item.id }"><img
-										src="<c:url value="/assets/user/img/${item.image}"/>" height="250px" alt=""
-										></a>
+										src="<c:url value="/assets/user/img/${item.image}"/>"
+										height="250px" alt=""></a>
 									<div class="caption">
 										<h5>${ item.name }</h5>
 										<h4>

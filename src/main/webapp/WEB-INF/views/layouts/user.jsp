@@ -3,6 +3,7 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
 	prefix="decorator"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ include file="/WEB-INF/views/layouts/user/taglib.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +39,7 @@
 					<a class="active" href="index.html"> <span class="icon-home"></span>
 						Trang chủ
 					</a> <a href="#"><span class="icon-user"></span> Tài Khoản</a> <a
-						href="register.html"><span class="icon-edit"></span> Đăng Ký </a>
+						href="/dang-ky"><span class="icon-edit"></span> Đăng Ký </a>
 					<a href="contact.html"><span class="icon-envelope"></span>
 						Liên Hệ</a> <a href="cart.html"><span
 						class="icon-shopping-cart"></span> 2 Item(s) - <span
