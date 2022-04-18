@@ -2,6 +2,7 @@ package damvc.Dao;
 
 import org.springframework.stereotype.Repository;
 
+import damvc.Entity.MapperUsers;
 import damvc.Entity.Users;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -38,5 +39,11 @@ public class UsersDao extends BaseDao{
 		
 		int insert = _jdbcTemplate.update(sql.toString());
 		return insert;
+	};
+	
+	public Users GetUserByAcc(Users user) {
+		String sql = "SELECT * FROM users WHERE email = '"+user.getEmail()+"'";		
+		Users result = _jdbcTemplate.queryForObject(sql, new MapperUsers());
+		return result;
 	};
 }

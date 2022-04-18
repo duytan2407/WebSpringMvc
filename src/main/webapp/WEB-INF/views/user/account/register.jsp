@@ -111,39 +111,46 @@
 					<div class="well">
 						<h5>Đăng ký tài khoản</h5>
 						<br />
-						<form:form action="dang-ky" method="POST" modelAttribute="user">  
+						<form:form action="dang-ky" method="POST" modelAttribute="user">
 							<div class="control-group">
 								<label class="control-label" for="inputEmail">E-mail</label>
-								<div class="controls">						
-									<form:input type="email" class="span3" placeholder="Nhập email" path="email" />  
+								<div class="controls">
+									<form:input type="email" class="span3" placeholder="Nhập email"
+										path="email" />
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="inputPassword">Mật khẩu</label>
+								<label class="control-label" for="inputPassword">Mật
+									khẩu</label>
 								<div class="controls">
-									<form:input type="password" class="span3" placeholder="Nhập mật khẩu" path="password" />  
+									<form:input type="password" class="span3"
+										placeholder="Nhập mật khẩu" path="password" />
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="inputName">Họ và tên</label>
 								<div class="controls">
-									<form:input type="text" class="span3" placeholder="Nhập họ và tên" path="full_name" />  
+									<form:input type="text" class="span3"
+										placeholder="Nhập họ và tên" path="full_name" />
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="inputAddress">Địa chỉ</label>
 								<div class="controls">
-									<form:input type="text" class="span3" placeholder="Nhập địa chỉ" path="address" /> 
+									<form:input type="text" class="span3"
+										placeholder="Nhập địa chỉ" path="address" />
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="inputPhone">SĐT</label>
 								<div class="controls">
-										<form:input type="text" class="span3" placeholder="Nhập số điện thoại" path="phone" /> 
+									<form:input type="text" class="span3"
+										placeholder="Nhập số điện thoại" path="phone" />
 								</div>
 							</div>
 							<div class="controls">
-								<button type="submit" class="btn block">Đăng ký tài khoản</button>
+								<button type="submit" class="btn block">Đăng ký tài
+									khoản</button>
 							</div>
 						</form:form>
 					</div>
@@ -151,20 +158,24 @@
 				<div class="span1">&nbsp;</div>
 				<div class="span4">
 					<div class="well">
-						<h5>Đã đăng ký tài khoản?</h5>
-						<form>
+						<h5>Đăng nhập</h5>
+						<c:if test="${statusLogin}">
+							<h1>${statusLogin}</h1>
+						</c:if>
+						<form:form action="dang-nhap" method="POST" modelAttribute="user">
 							<div class="control-group">
 								<label class="control-label" for="inputEmail">Email</label>
 								<div class="controls">
-									<input class="span3" type="text" placeholder="Nhập email">
+									<form:input type="email" class="span3" placeholder="Nhập email"
+										path="email" />
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="inputPassword">Mật
 									khẩu</label>
 								<div class="controls">
-									<input type="password" class="span3"
-										placeholder="Nhập mật khẩu">
+									<form:input type="password" class="span3"
+										placeholder="Nhập mật khẩu" path="password" />
 								</div>
 							</div>
 							<div class="control-group">
@@ -173,7 +184,7 @@
 									<a href="#">Quên mật khẩu?</a>
 								</div>
 							</div>
-						</form>
+						</form:form>
 					</div>
 				</div>
 			</div>
