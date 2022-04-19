@@ -109,7 +109,7 @@ New Products
 								<div class="thumbnail">
 									<a class="zoomTool" href="#" title="add to cart"><span
 										class="icon-search"></span> QUICK VIEW</a> <a
-										href="chi-tiet-san-pham/${item.id }"><img
+										href="chi-tiet/${item.id }"><img
 										src="<c:url value="/assets/user/img/${item.image}"/>"
 										height="250px" alt=""></a>
 									<div class="caption">
