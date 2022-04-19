@@ -8,9 +8,9 @@ import damvc.Dto.ProductsDto;
 import damvc.Dto.ProductsDtoMapper;
 
 @Repository
-public class ProductsDao extends BaseDao {
+public class productsDao extends BaseDao {
 
-	private String sqlString() {
+	private StringBuffer sqlString() {
 		StringBuffer sql = new StringBuffer();
 		sql.append("SELECT p.id as id ");
 		sql.append(",p.name ");
@@ -21,13 +21,44 @@ public class ProductsDao extends BaseDao {
 		sql.append(",p.image ");
 		sql.append(",p.unit ");
 		sql.append(",p.neww ");
-		sql.append("FROM products AS p");
+		sql.append("FROM products AS p ");
+//		sql.append("LIMIT 9");
+		return sql;
+	}
+	private String SqlProductsByID(int id) {
+		StringBuffer sql = sqlString();
+		sql.append("WHERE 1 = 1 ");
+		sql.append("AND id_type = " + id + " ");
 		return sql.toString();
 	}
+	
+	
 
 	public List<ProductsDto> getDataProducts() {
-		String sql = sqlString();
+		String sql = sqlString().toString();
 		List<ProductsDto> listProducts = _jdbcTemplate.query(sql, new ProductsDtoMapper());
 		return listProducts;
+	}
+	public List<ProductsDto> GetAllProductsByID(int id) {
+		String sql = SqlProductsByID(id).toString();
+		List<ProductsDto> listProducts = _jdbcTemplate.query(sql, new ProductsDtoMapper());
+		return listProducts;
+	}
+	private String SqlProductByID(int id) {
+		StringBuffer sql = sqlString();
+		sql.append("WHERE 1 = 1 ");
+		sql.append("AND p.id = " + id + " ");
+		
+		return sql.toString();
+	}
+	public List<ProductsDto> GetProductByID(int id) {
+		String sql = SqlProductByID(id);
+		List<ProductsDto> listProduct = _jdbcTemplate.query(sql, new ProductsDtoMapper());
+		return listProduct;
+	}
+	public ProductsDto FindProductByID(String id) {
+		String sql = SqlProductByID(Integer.parseInt(id));
+		ProductsDto Product = _jdbcTemplate.queryForObject(sql, new ProductsDtoMapper());
+		return Product;
 	}
 }

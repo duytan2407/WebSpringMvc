@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import damvc.Dao.ProductsDao;
+import damvc.Dao.productsDao;
 import damvc.Dao.SlideDao;
 import damvc.Dao.Type_productsDao;
 import damvc.Dto.ProductsDto;
@@ -20,7 +20,7 @@ public class HomeServiceImpl implements IHomeService {
 	@Autowired
 	private Type_productsDao typeDao;
 	@Autowired
-	private ProductsDao productsDao;
+	private productsDao productsDao;
 	
 
 	public List<Slide> GetDataSlide() {

@@ -3,7 +3,9 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
 	prefix="decorator"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <%@ include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,8 +38,18 @@
 			<div class="container">
 				<div class="alignR">
 
+					<a class="active" href="index.html"> <span class="icon-home"></span>
 					<a class="active" href="/DAMVC"> <span class="icon-home"></span>
 						Trang chủ
+					</a> <a href="#"><span class="icon-user"></span> Tài Khoản</a> <a
+						href="register.html"><span class="icon-edit"></span> Đăng Ký </a>
+					<a href="contact.html"><span class="icon-envelope"></span>
+						Liên Hệ</a> <a href="cart.html"><span
+						class="icon-shopping-cart"></span> 2 Item(s) - <span
+						class="badge badge-warning"> $448.42</span></a>
+
+
+
 					</a>
 					<c:if test="${not empty LoginInfo }">
 						<a href="#"><span class="icon-user"></span>
@@ -64,10 +76,13 @@ Lower Header Section
 		<div id="gototop"></div>
 
 		<%@include file="/WEB-INF/views/layouts/user/header.jsp"%>
+		
 
 		<decorator:body />
+		
 
 		<%@include file="/WEB-INF/views/layouts/user/footer.jsp"%>
+		
 
 
 

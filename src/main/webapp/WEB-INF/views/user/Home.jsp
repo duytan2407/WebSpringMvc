@@ -12,24 +12,17 @@
 	<!-- 
 Body Section 
 -->
-	<h1>${product.size()}</h1>
 	<div class="row">
 		<div id="sidebar" class="span3">
 			<div class="well well-small">
 				<ul class="nav nav-list">
 					<c:forEach var="item" items="${type}" varStatus="index">
-						<li><a href="/san-pham/${item.id}"><span
-								class="icon-chevron-right"> </span>${item.name}</a></li>
+						<li><a href='<c:url value="/san-pham/${item.id}"/>'><span
+								class="c"> </span>${item.name}</a></li>
 					</c:forEach>
-
-
-					<li style="border: 0">&nbsp;</li>
-					<li><a class="totalInCart" href="cart.html"><strong>Total
-								Amount <span class="badge badge-warning pull-right"
-								style="line-height: 18px;">$448.42</span>
-						</strong></a></li>
 				</ul>
 			</div>
+<<<<<<< HEAD
 
 			<div class="well well-small alert alert-warning cntr">
 				<h2>50% Discount</h2>
@@ -39,6 +32,9 @@ Body Section
 				</p>
 			</div>
 		</div>
+=======
+</div>
+>>>>>>> master
 		<div class="span9">
 			<div class="well np">
 				<div id="myCarousel" class="carousel slide homCar">
@@ -69,92 +65,36 @@ Body Section
 New Products
 -->
 		<div class="well well-small">
-			<h3>Món Ngon Nóng Sồn Sột</h3>
+			<h3>Sản phẩm mới</h3>
 			<hr class="soften" />
 			<div class="row-fluid">
 				<div id="newProductCar" class="carousel slide">
 					<div class="carousel-inner">
-						<div class="item active">
-							<ul class="thumbnails">
-								<li class="span3">
-									<div class="thumbnail">
-										<a class="zoomTool" href="product_details.html"
-											title="add to cart"><span class="icon-search"></span>
-											QUICK VIEW</a> <a href="#" class="tag"></a> <a
-											href="product_details.html"><img
-											src="<c:url value="assets/user/img/bancahp.png"/>"
-											alt="bancahp.png"></a>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="thumbnail">
-										<a class="zoomTool" href="product_details.html"
-											title="add to cart"><span class="icon-search"></span>
-											QUICK VIEW</a> <a href="#" class="tag"></a> <a
-											href="product_details.html"><img
-											src="<c:url value="assets/user/img/bancahp.png"/>" alt=""></a>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="thumbnail">
-										<a class="zoomTool" href="product_details.html"
-											title="add to cart"><span class="icon-search"></span>
-											QUICK VIEW</a> <a href="#" class="tag"></a> <a
-											href="product_details.html"><img
-											src="<c:url value="assets/user/img/bancahp.png"/> " alt=""></a>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="thumbnail">
-										<a class="zoomTool" href="product_details.html"
-											title="add to cart"><span class="icon-search"></span>
-											QUICK VIEW</a> <a href="product_details.html"><img
-											src="<c:url value="assets/user/img/bancahp.png"/> assets/user/img/bancahp.png"
-											alt=""></a>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="item">
-							<ul class="thumbnails">
-								<li class="span3">
-									<div class="thumbnail">
-										<a class="zoomTool" href="product_details.html"
-											title="add to cart"><span class="icon-search"></span>
-											QUICK VIEW</a> <a href="product_details.html"><img
-											src="<c:url value="assets/user/img/bancahp.png"/> assets/user/img/bancahp.png"
-											alt=""></a>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="thumbnail">
-										<a class="zoomTool" href="product_details.html"
-											title="add to cart"><span class="icon-search"></span>
-											QUICK VIEW</a> <a href="product_details.html"><img
-											src="<c:url value="assets/user/img/bancahp.png"/> assets/user/img/bancahp.png"
-											alt=""></a>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="thumbnail">
-										<a class="zoomTool" href="product_details.html"
-											title="add to cart"><span class="icon-search"></span>
-											QUICK VIEW</a> <a href="product_details.html"><img
-											src="<c:url value="assets/user/img/bancahp.png"/> assets/user/img/bancahp.png"
-											alt=""></a>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="thumbnail">
-										<a class="zoomTool" href="product_details.html"
-											title="add to cart"><span class="icon-search"></span>
-											QUICK VIEW</a> <a href="product_details.html"><img
-											src="<c:url value="assets/user/img/bancahp.png"/> assets/user/img/bancahp.png"
-											alt=""></a>
-									</div>
-								</li>
-							</ul>
-						</div>
+						<c:if test="${ product.size() > 0 }">
+							<div class="item active">
+								<ul class="thumbnails">
+									<c:forEach var="item" items="${ product }" varStatus="loop">
+										<li class="span3">
+											<div class="thumbnail">
+												<a class="zoomTool" href="product_details.html"
+													title="add to cart"><span class="icon-search"></span>
+													QUICK VIEW</a>  <a href="chi-tiet/${item.id }"><img
+													src="<c:url value="/assets/user/img/${item.image}"/>"
+													height="250px" alt=""></a>
+											</div>
+										</li>
+										<c:if
+											test="${ (loop.index + 1) % 4 == 0 || (loop.index + 1)  == products.size() }">
+								</ul>
+							</div>
+							<c:if test="${ (loop.index + 1) < product.size() }">
+								<div class="item">
+									<ul class="thumbnails">
+							</c:if>
+						</c:if>
+						</c:forEach>
+						</c:if>
+
 					</div>
 					<a class="left carousel-control" href="#newProductCar"
 						data-slide="prev">&lsaquo;</a> <a class="right carousel-control"
@@ -182,7 +122,11 @@ New Products
 								<div class="thumbnail">
 									<a class="zoomTool" href="#" title="add to cart"><span
 										class="icon-search"></span> QUICK VIEW</a> <a
+<<<<<<< HEAD
 										href="chi-tiet-san-pham/${item.id }"><img
+=======
+										href="chi-tiet/${item.id }"><img
+>>>>>>> master
 										src="<c:url value="/assets/user/img/${item.image}"/>"
 										height="250px" alt=""></a>
 									<div class="caption">
@@ -190,7 +134,7 @@ New Products
 										<h4>
 											<a class="defaultBtn" href="product_details.html"
 												title="Click to view"><span class="icon-zoom-in"></span></a>
-											<a class="shopBtn" href="#" title="add to cart"><span
+											<a class="shopBtn" href="<c:url value="/Addcart/${item.id}"/>" title="add to cart"><span
 												class="icon-plus"></span></a> <span class="pull-right"><fmt:formatNumber
 													type="number" groupingUsed="true"
 													value="${item.unit_price}" />₫</span>
@@ -216,14 +160,10 @@ New Products
 		<hr>
 
 		<div class="well well-small">
-			<a class="btn btn-mini pull-right" href="#">View more <span
+			<a class="btn btn-mini pull-right" href="#">Xem Thêm <span
 				class="icon-plus"></span></a> Popular Products
 		</div>
-		<hr>
-		<div class="well well-small">
-			<a class="btn btn-mini pull-right" href="#">View more <span
-				class="icon-plus"></span></a> Best selling Products
-		</div>
+
 	</div>
 	</div>
 	<!-- 

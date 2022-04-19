@@ -6,7 +6,7 @@
 		<div class="span4">
 			<h1>
 				<a class="logo" href="index.html"><span></span> <img
-					src="assets/user/img/logo-amthuc.png" alt="bootstrap sexy shop">
+					src="assets/user/img/logo-amthuc.png" >
 				</a>
 			</h1>
 		</div>
@@ -25,8 +25,8 @@ Navigation Bar Section
 			</a>
 			<div class="nav-collapse">
 				<ul class="nav">
-					<li class="active"><a href="index.html">Trang Chủ </a></li>
-					<li class=""><a href="list-view.html">Món Ăn </a></li>
+					<li class="active"><a href='<c:url value="/trang-chu"/>'>Trang Chủ </a></li>
+				
 					<li class=""><a href="grid-view.html">Giới Thiệu</a></li>
 					<li class=""><a href="three-col.html">Liên Hệ</a></li>
 				</ul>
