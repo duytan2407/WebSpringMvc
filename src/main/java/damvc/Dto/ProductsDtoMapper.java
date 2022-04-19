@@ -18,8 +18,6 @@ public class ProductsDtoMapper implements RowMapper<ProductsDto> {
 		products.setImage(rs.getString("image"));
 		products.setUnit(rs.getString("unit"));
 		products.setNeww(rs.getBoolean("neww"));
-		products.setCreated_at(rs.getDate("created_at"));
-		products.setUpdated_at(rs.getDate("updated_at"));
 		return products;
 	}
 

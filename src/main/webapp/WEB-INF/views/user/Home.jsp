@@ -4,6 +4,7 @@
 	prefix="decorator"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
 
 <%@ page isELIgnored="false"%>
 <title>Trang Chủ</title>
@@ -21,7 +22,19 @@ Body Section
 					</c:forEach>
 				</ul>
 			</div>
+<<<<<<< HEAD
 </div>
+=======
+
+			<div class="well well-small alert alert-warning cntr">
+				<h2>50% Discount</h2>
+				<p>
+					only valid for online order. <br> <br> <a
+						class="defaultBtn" href="#">Click here </a>
+				</p>
+			</div>
+		</div>
+>>>>>>> remotes/origin/cuong
 		<div class="span9">
 			<div class="well np">
 				<div id="myCarousel" class="carousel slide homCar">
@@ -109,7 +122,11 @@ New Products
 								<div class="thumbnail">
 									<a class="zoomTool" href="#" title="add to cart"><span
 										class="icon-search"></span> QUICK VIEW</a> <a
+<<<<<<< HEAD
 										href="chi-tiet/${item.id }"><img
+=======
+										href="chi-tiet-san-pham/${item.id }"><img
+>>>>>>> remotes/origin/cuong
 										src="<c:url value="/assets/user/img/${item.image}"/>"
 										height="250px" alt=""></a>
 									<div class="caption">

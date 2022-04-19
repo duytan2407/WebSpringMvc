@@ -21,6 +21,7 @@ public class productsDao extends BaseDao {
 		sql.append(",p.image ");
 		sql.append(",p.unit ");
 		sql.append(",p.neww ");
+<<<<<<< HEAD:src/main/java/damvc/Dao/productsDao.java
 		sql.append(",p.created_at ");
 		sql.append(",P.updated_at ");
 		sql.append("FROM products AS p ");
@@ -31,6 +32,9 @@ public class productsDao extends BaseDao {
 		StringBuffer sql = sqlString();
 		sql.append("WHERE 1 = 1 ");
 		sql.append("AND id_type = " + id + " ");
+=======
+		sql.append("FROM products AS p");
+>>>>>>> remotes/origin/cuong:src/main/java/damvc/Dao/ProductsDao.java
 		return sql.toString();
 	}
 	
