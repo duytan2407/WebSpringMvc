@@ -6,7 +6,7 @@
 		<div class="span4">
 			<h1>
 				<a class="logo" href="index.html"><span></span> <img
-					src="assets/user/img/logo-amthuc.png" alt="bootstrap sexy shop">
+					src="assets/user/img/logo-amthuc.png" >
 				</a>
 			</h1>
 		</div>
