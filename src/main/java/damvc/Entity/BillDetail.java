@@ -38,50 +38,7 @@ public class BillDetail {
 }
 
 
-//<form:form action="checkout" method="POST" modelAttribute="bills"
-//class="form-horizontal">
-//<h3>Thanh toán đơn hàng</h3>
-//<div class="control-group">
-//	<label class="control-label" for="inputName">Họ và tên</label>
-//	<div class="controls">
-//		<form:input type="text" class="span3"
-//			placeholder="Nhập họ và tên" path="full_name" />
-//	</div>
-//</div>
-//<div class="control-group">
-//	<label class="control-label" for="inputEmail">E-mail</label>
-//	<div class="controls">
-//		<form:input type="email" class="span3" placeholder="Nhập email"
-//			path="email" />
-//	</div>
-//</div>
-//<div class="control-group">
-//	<label class="control-label" for="inputPhone">SĐT</label>
-//	<div class="controls">
-//		<form:input type="text" class="span3"
-//			placeholder="Nhập số điện thoại" path="phone" />
-//	</div>
-//</div>
-//<div class="control-group">
-//	<label class="control-label" for="inputAddress">Địa chỉ</label>
-//	<div class="controls">
-//		<form:input type="text" class="span3"
-//			placeholder="Nhập địa chỉ" path="address" />
-//	</div>
-//</div>
-//<div class="control-group">
-//	<label class="control-label">Ghi chú<sup>*</sup></label>
-//	<div class="controls">
-//		<form:textarea path="note" rows="5" cols="30" />
-//	</div>
-//</div>
-//<div class="control-group">
-//	<div class="controls">
-//		<input type="submit" name="submitOrder" value="Đặt hàng"
-//			class="shopBtn exclusive">
-//	</div>
-//</div>
-//</form:form>
+
 
 
 

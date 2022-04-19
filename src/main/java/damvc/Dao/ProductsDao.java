@@ -21,8 +21,6 @@ public class ProductsDao extends BaseDao {
 		sql.append(",p.image ");
 		sql.append(",p.unit ");
 		sql.append(",p.neww ");
-		sql.append(",p.created_at ");
-		sql.append(",P.updated_at ");
 		sql.append("FROM products AS p");
 		return sql.toString();
 	}
