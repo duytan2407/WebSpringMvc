@@ -39,7 +39,7 @@
 						
 							<c:forEach var="item" items="${Cart}">
 								<tr>
-							<td><img width="100" src="<c:url value="assets/u/img/${item.value.product.image}"/>" alt=""></td>
+							<td><img width="100" src="<c:url value="assets/user/img/${item.value.product.image}"/>" alt=""></td>
 							<td>${item.value.product.name}</td>
 							<td>-</td>
 							<td><span class="shopBtn"><span class="icon-ok"></span></span>

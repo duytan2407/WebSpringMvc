@@ -65,7 +65,7 @@ New Products
 											<div class="thumbnail">
 												<a class="zoomTool" href="product_details.html"
 													title="add to cart"><span class="icon-search"></span>
-													QUICK VIEW</a> <a href="product_details.html"><img
+													QUICK VIEW</a>  <a href="chi-tiet/${item.id }"><img
 													src="<c:url value="/assets/user/img/${item.image}"/>"
 													height="250px" alt=""></a>
 											</div>

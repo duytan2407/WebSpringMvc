@@ -4,12 +4,10 @@
 	prefix="decorator"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
 <%@ page isELIgnored="false"%>
-<!DOCTYPE html>
-<html>
+
 <head>
-<title>Insert title here</title>
+<title>Loại Sản Phẩm</title>
 <style>
 .pagination {
 	display: flex;
@@ -98,4 +96,3 @@
 		<a href="#">&raquo;</a>
 	</div>
 </body>
-</html>

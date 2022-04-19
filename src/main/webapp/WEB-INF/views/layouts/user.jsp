@@ -38,12 +38,13 @@
 			<div class="container">
 				<div class="alignR">
 
-					<a class="active" href="index.html"> <span class="icon-home"></span>
+					<a class="active" href='<c:url value="/trang-chu"/>'> <span class="icon-home"></span>
 						Trang chủ
-					</a> <a href='<c:url value="/list-cart"/>'><span class="icon-user"></span> Tài Khoản</a> <a
+					</a> <a href="#"><span class="icon-user"></span> Tài Khoản</a> <a
 						href="register.html"><span class="icon-edit"></span> Đăng Ký </a>
 					<a href="contact.html"><span class="icon-envelope"></span>
-						Liên Hệ</a> <a href='<c:url value="/list-cart"/>'><span
+						Liên Hệ</a>
+						 <a href='<c:url value="/list-cart"/>'><span
 						class="icon-shopping-cart"></span> ${Totalquanty} Item(s) - <span
 						class="badge badge-warning"><fmt:formatNumber
 													type="number" groupingUsed="true"
