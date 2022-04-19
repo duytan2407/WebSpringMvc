@@ -3,6 +3,7 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
 	prefix="decorator"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,12 +40,14 @@
 
 					<a class="active" href="index.html"> <span class="icon-home"></span>
 						Trang chủ
-					</a> <a href="#"><span class="icon-user"></span> Tài Khoản</a> <a
+					</a> <a href='<c:url value="/list-cart"/>'><span class="icon-user"></span> Tài Khoản</a> <a
 						href="register.html"><span class="icon-edit"></span> Đăng Ký </a>
 					<a href="contact.html"><span class="icon-envelope"></span>
-						Liên Hệ</a> <a href="cart.html"><span
-						class="icon-shopping-cart"></span> 2 Item(s) - <span
-						class="badge badge-warning"> $448.42</span></a>
+						Liên Hệ</a> <a href='<c:url value="/list-cart"/>'><span
+						class="icon-shopping-cart"></span> ${Totalquanty} Item(s) - <span
+						class="badge badge-warning"><fmt:formatNumber
+													type="number" groupingUsed="true"
+													value=" ${TotalPrice}" />₫</span></a> 
 				</div>
 			</div>
 		</div>

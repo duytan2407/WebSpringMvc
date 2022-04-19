@@ -37,7 +37,7 @@
 </style>
 </head>
 <body>
-	<h1>${AllIdpro.size()}</h1>
+	
 	<div class="well well-small">
 		<div class="row">
 			<span style="margin-left: 25px;">Danh Sách Sản Phẩm </span> <select
@@ -79,10 +79,10 @@
 							</div>
 						</li>
 						<c:if
-							test="${ (loop.index + 1) % 4 == 0 || (loop.index + 1)  == products.size() }">
+							test="${ (loop.index + 1) % 4 == 0 || (loop.index + 1)  == AllIdpro.size() }">
 				</ul>
 			</div>
-			<c:if test="${ (loop.index + 1) < product.size() }">
+			<c:if test="${ (loop.index + 1) < AllIdpro.size() }">
 				<div class="item">
 					<ul class="thumbnails">
 			</c:if>
